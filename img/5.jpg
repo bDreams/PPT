@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>页面未找到_台海网</title>
+    <link rel="stylesheet" type="text/css" href="http://img.taihainet.com/templates/default/css/cmstop-error.css" media="all">
+</head>
+<body class="body-bg">
+<div class="main">
+    <p class="title" id="message_title">非常抱歉，您要查看的页面没有办法找到</p>
+    <a href="http://www.taihainet.com/" class="btn">返回网站首页</a>
+</div>
+<script language="javascript">
+	function check_url(){
+		var path = self.location.pathname;
+		var reg = /\/(\d+)(_\d+)?\.html/;
+		var o = reg.exec(path);
+		if (o != null){
+			var id = o[1];
+			var page = (o[2] && o[2].length > 0) ? o[2].slice(1) : 1;
+
+			document.write("<script  language='javascript' src='http://app.taihainet.com/?app=geturl&id=" + id + "&page=" + page + "'></" + "script>");
+		}
+	}
+
+	function jumpto(url){
+		if (url == null || url == ''){
+			return;
+		}
+		var path = self.location.protocol + '//' + self.location.hostname + self.location.port + self.location.pathname;
+		if (url == path) {
+			return;
+		}
+		document.getElementById('message_title').innerHTML = '页面地址已改变，5 秒钟后自动前往';
+		new_url = url;
+		count = 5;
+		setTimeout(countdown, 1000);
+	}
+
+	var new_url = '',
+		count = 5;
+
+	function countdown(){
+		if (--count <= 0){
+			self.location.replace(new_url);
+			return;
+		}
+
+		document.getElementById('message_title').innerHTML = '页面地址已改变，' + count + ' 秒钟后自动前往';
+		setTimeout(countdown, 1000);
+	}
+
+	check_url();
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/*
+* @Author: dongjiabo
+* @Date:   2016-03-12 15:46:58
+* @Last Modified by:   dongjiabo
+* @Last Modified time: 2016-03-12 18:14:49
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+.slider {
+    width: 600px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+#slider-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slider-box .slider-img-box {
+    width: 200%;
+}
+
+#slider-box .img-list {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+}
+
+#slider-box .img-list img {
+    width: 100%;
+}
+
+#slider-box .slider-ctrl {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    bottom: 10px;
+}
+
+#slider-box .slider-ctrl span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #C5D3D5;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: 999em;
+}
+
+#slider-box .slider-ctrl span.active {
+    background-color: #6C6181;
+}
+
+#slider-box > .btn-box {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%;
+    height: 60px;
+    display: none;
+}
+
+#slider-box > .btn-box > .btn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 999;
+}
+
+#slider-box > .btn-box > .btn:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+#slider-box > .btn-box > .btn-prev {
+    left: 10px;
+}
+
+#slider-box > .btn-box > .btn-next {
+    right: 10px;
+}
