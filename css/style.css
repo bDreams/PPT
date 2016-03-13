@@ -2,7 +2,7 @@
 * @Author: dongjiabo
 * @Date:   2016-03-12 15:46:58
 * @Last Modified by:   dongjiabo
-* @Last Modified time: 2016-03-12 18:14:49
+* @Last Modified time: 2016-03-13 15:38:38
 */
 
 * {
@@ -14,32 +14,29 @@ img {
     vertical-align: top;
 }
 
-.slider {
-    width: 600px;
-    height: 300px;
-    margin: 30px auto;
-}
-
 #slider-box {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
 #slider-box .slider-img-box {
     width: 200%;
+    height: 100%;
 }
 
 #slider-box .img-list {
-    width: 600px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
 }
 
 #slider-box .img-list img {
     width: 100%;
+    height: 100%;
 }
 
 #slider-box .slider-ctrl {
@@ -58,6 +55,7 @@ img {
     display: inline-block;
     cursor: pointer;
     text-indent: 999em;
+    margin: 0 2px;
 }
 
 #slider-box .slider-ctrl span.active {
