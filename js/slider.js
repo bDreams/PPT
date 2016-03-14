@@ -2,7 +2,7 @@
  * @Author: dongjiabo
  * @Date:   2016-03-12 15:46:42
  * @Last Modified by:   dongjiabo
- * @Last Modified time: 2016-03-13 15:47:47
+ * @Last Modified time: 2016-03-14 19:50:19
  */
 (function($) {
     $.fn.slider = function(config) {
@@ -92,6 +92,8 @@
             if (!options.autoplayDisableOnInteraction) return false;
             timer = setInterval(nextFn, options.autoplay);
         });
+
+        return this; // 链式调用
 
         // 上一个按钮效果函数
         function prevFn() {
